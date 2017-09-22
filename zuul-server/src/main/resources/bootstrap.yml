@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: gateway-service-zuul   
+  # 配置中心
+  cloud:  
+    config:  
+      uri: http://192.168.1.200:7090
+      name:  shengyibao
+      profile: dev
+      label: syb  # 当使用git存储时，默认就是master
+server:
+  port: 8888

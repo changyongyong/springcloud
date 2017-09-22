@@ -1,0 +1,16 @@
+{
+    "dataBase": {
+        "ctcDb": {
+            "database": "ctcdb_wxpay",
+            "host": "192.168.0.103",
+            "username": "wxuser",
+            "password": "wx898816",
+            "dialect": "mysql",
+            "timezone": "+08:00"
+        }
+    },
+    "port": 3100,
+    "outPort": 3110,
+    "SPBILL_CREATED_IP": "211.152.32.59",
+    "NOTIFY_URL": "http://wxpaytest.dd528.com/weixin/pay/notify"
+}

@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+
+require('../config/loadConfig');
+
+let Logger = require('../utils/logger').Logger('cluster');
+const baseConfig = global.BASECONFIG;
+//var numCPUs;
+let port = baseConfig.port;
+let outPort = baseConfig.outPort;
+
+
+let app = require('../app').app;
+let outApp = require('../outApp').app;
+
+process.on('uncaughtException', function (err) {
+    Logger.fatal(JSON.stringify({
+        message: '未被catch的异常！！',
+        error: err,
+        stack: err.stack,
+        message2: err.message
+    }))
+});
+app.set('port', port);
+
+let server = app.listen(app.get('port'), function () {
+    Logger.info('dianda alipay listening on ' + server.address().address + ':' + server.address().port);
+});
+
+outApp.set('port', outPort);
+let outServer = outApp.listen(outApp.get('port'), function () {
+    Logger.info('dian alipay out server listening on ' + outServer.address().address + ':' + outServer.address().port);
+});
+
+Logger.info(`TRADE_SYSTEM_FOR for ${global.TRADE_SYSTEM_FOR}`);

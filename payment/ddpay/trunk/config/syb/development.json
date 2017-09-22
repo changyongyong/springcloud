@@ -1,0 +1,27 @@
+{
+    "port": 52200,
+    "redis": {
+        "host": "192.168.1.101",
+        "port": 6379,
+        "db": 12
+    },
+    "tradeGatewayHost": "http://localhost:52300",
+    "dataBase": {
+        "ddPayDb": {
+            "database": "dd_pay_test_db",
+            "host": "192.168.1.101",
+            "username": "apiuser",
+            "password": "123456",
+            "dialect": "mysql",
+            "isolationLevel": "READ COMMITTED",
+            "logging": true,
+            "options": {
+                "host": "192.168.1.101",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00"
+            }
+        }
+    }
+}

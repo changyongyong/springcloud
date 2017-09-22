@@ -1,0 +1,120 @@
+<%- include ../base/head.html %>
+<link rel="stylesheet" href="/plugins/bootstrap/bootstrap-datetimepicker.min.css">
+<style>
+    .search {
+        margin-left: 15px;
+    }
+
+    .search label:nth-child(n+2) {
+        margin-left: 15px;
+    }
+
+    .search [func=search] {
+        margin-left: 15px;
+        width: 150px;
+        display: inline-block
+    }
+    .search [func=export] {
+        margin-left: 15px;
+        width: 50px;
+        display: inline-block
+    }
+
+    input.queryTime.form-control {
+        cursor: pointer;
+        width: 150px;
+        height: 30px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .form-group select {
+        margin-left:  10px
+    }
+    .goods-info span {
+        display: inline-block;
+        width: 150px;
+        margin-left: 10px;
+    }
+    .goods-info label {
+        margin-left: 15px;
+    }
+    .trade-success {
+        color: green;
+        font-weight: 600;
+        font-size: 17px
+    }
+    .trade-fail{
+        color: red;
+        font-weight: 600;
+        font-size: 17px
+    }
+    .trade-pendding{
+        color: darkorange;
+        font-size: 17px
+    }
+</style>
+<%- include ../base/css.html %>
+<%- include ../plugins/datatables/css.html %>
+<%- include ../base/container.html %>
+
+<div class="search">
+    <div class="form-group">
+        <label>开始日期</label>
+        <input func="startTime" class="form-control width-150 queryTime">
+        <label>截止日期</label>
+        <input func="endTime" class="form-control width-150 queryTime">
+        <label>发起系统</label>
+        <select func="system" class="form-control width-150"></select>
+        <label>退款状态</label>
+        <select func="status" class="form-control width-150"></select>
+        <!--<label>核验状态</label>-->
+        <!--<select func="validateStatus" class="form-control width-150"></select>-->
+    </div>
+    <div class="form-group">
+        <label>退&nbsp;款&nbsp;号&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" id="tradeRecordNo" class="form-control width-250">
+        <label>付&nbsp;款&nbsp;号</label>
+        <input type="text" id="orderNo" class="form-control width-250">
+        <label>城市</label>
+        <select func="cities" class="form-control width-150"></select>
+    </div>
+    <div class="form-group">
+        <label>对账标识</label>
+        <select func="validateStatus" class="form-control width-150"></select>
+        <label>对账结果</label>
+        <select func="validateStatus2" class="form-control width-150"></select>
+        <label>交易账户</label>
+        <select func="source" class="form-control width-150"></select>
+        <label>交易渠道</label>
+        <select func="mainTradeChannel" class="form-control width-150"></select>
+        <span func="export" class="btn btn-default">导出</span>
+        <span func="search" class="btn btn-info form-control width-150">查询</span>
+    </div>
+</div>
+<hr>
+<div>
+    <div class="panel" >
+        <label style="font-size: 26px;padding-left:10px;">转账汇总信息（只统计网关为成功状态的记录）</label>
+        <hr>
+        <table id="statisticArea" class="table table-bordered">
+            <th>暂无记录...</th>
+        </table>
+    </div>
+</div>
+<hr>
+<div>
+    <div class="col-lg-12">
+        <div class="table-responsive">
+            <div class="panel panel-default" style="border: 0;">
+                <table class="table table-striped table-bordered table-hover" id="main-table"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include ../base/javascript.html %>
+<%- include ../plugins/datatables/javascript.html %>
+<script type="text/javascript" src="/plugins/moment.min.js"></script>
+<script type="text/javascript" src="/plugins/bootstrap/bootstrap-datetimepicker.min.js"></script>
+<script src="/javascript/refund/record.js"> </script>
+<%-include ../base/footer.html %>

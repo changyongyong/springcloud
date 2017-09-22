@@ -1,0 +1,66 @@
+<%- include ../base/head.html %>
+<%- include ../base/css.html %>
+<style>
+    body,html,img,span,form,input,hr,p{padding: 0;margin: 0;font-family:arial,"Microsoft Yahei",simsun;font-size:20px; }
+    input:focus {outline:none;  }
+    .login{background:#0b0808;}
+    .login-bg{position: relative;z-index: -1;float: left;width: 100%;height: 100%;}
+    .login-contain{position:relative;}
+    .login-top{position:absolute;z-index: 1;width: 100%;height: 90px;line-height:90px;background: #3b3b3b;}
+    .login-top  img{margin-left:180px;vertical-align: middle;}
+    .login-top span{color:#f0f0f0;font-family:arial;font-size:28px;font-weight: 200;vertical-align: middle;}
+    .pre{display:inline-block;width: 2px;height: 30px;background: #f0f0f0;vertical-align: middle;margin: 0 10px;}
+    .login-focus{position:relative;width: 100%;height: 100%;}
+    .login-focus img{position: absolute;margin-top:8.23%;margin-left:5%;}
+    .login-form{position: absolute;right:16.15%;margin-top:10.59%;width: 400px;height:391px;background: #f8f9fa;border-radius:8px;}
+    .login-form img{margin:11.5% 0 0 2.5%;}
+    .login-form hr{margin-top:74px;width: 398px;height:2px;background:#cfd0d3; }
+    .login-form-input{margin:58px 0 0 24px;width: 344px;height: 300px;}
+    .login-input-top{position:absolute;width: 344px;height: 120px;border:2px solid #e4e6e9;background: #e4e6e9;  border-radius: 8px;}
+    .login-input-top input{padding: 0 0 0 20px ;width: 324px;height: 56px;border: none;border-radius: 8px;background: #e4e6e9;text-align: center;}
+    .login-input-top input:focus{border-radius: 8px;;}
+    .login-input-top span{position:absolute;top:10px;color: #636363;margin:0 10px;}
+    .login-form-login{position:relative;z-index:11; margin-top: 150px;width: 344px;height: 56px;border: 1px solid #c69d4a;background: #e0aa54;border-radius: 8px;color: #ffffff;font-family: bold;cursor: pointer;}
+    .login-bottom{position: fixed;z-index: 1;bottom: 0;width: 100%;}
+    .login-info{position:absolute;bottom:0;z-index: 1;color: #ffffff;width: 100%;text-align: center;margin-bottom: 0;}
+    .login-info p:nth-child(1){margin-bottom: 10px;}
+    .login-info p:nth-child(2){font-size: 16px;color: #535456;margin-bottom: 10px;}
+    .login-info p:nth-child(3){font-size: 12px;color: #535456;margin-bottom: 10px;}
+    .login-info p:nth-child(4){background: url("/images/login-bottom.png") ;height: 15px;}
+</style>
+</head>
+<body class="login">
+<img class="login-bg" src="/images/bg.jpg" alt="login-bg"/>
+<div class="login-contain">
+    <div class="login-top">
+        <img src="/images/logo-mi.png" alt="logo"/>
+        <span>店达信息</span>
+        <div class="pre"></div>
+        <span style="font-size: 20px;font-family:SimHei;"><%= global.APP_NAME + '登录' %></span>
+        <span style="font-size: 16px;margin-left: 20px;">V<%= global.VERSION %></span>
+    </div>
+    <div class="login-focus">
+        <div class="login-form">
+            <img src="/images/login.png" alt="login"/>
+            <hr/>
+            <form class="login-form-input" method="post" role="form">
+                <div class="login-input-top">
+                    <span>账号</span><input class="login-input-user" type="text" name="userName" id="userName"/>
+                    <hr style="width: 344px;height:2px;margin-top:0;"/>
+                    <span style="top:75px;">密码</span><input id="password" type="password" name="password"/>
+                </div>
+                <input class="login-form-login" type="submit" value="登录"/>
+            </form>
+        </div>
+    </div>
+    <div class="login-bottom">
+        <div class="login-info">
+            <p>让创造价值的人在店达实现人生价值</p>
+            <p style="color: #535456;font-size: 16px;">上海店达信息技术有限公司</p>
+            <p>© <%= new Date().getFullYear() %> diandainfo Technologies</p>
+            <p></p>
+        </div>
+    </div>
+</div>
+<%- include ../base/javascript.html %>
+<%- include ../base/footer.html %>

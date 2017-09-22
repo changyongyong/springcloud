@@ -1,0 +1,50 @@
+
+CREATE TABLE `wx_transaction_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `appId` varchar(32) DEFAULT NULL,
+  `mchId` varchar(32) DEFAULT NULL,
+  `source` varchar(16) DEFAULT NULL,
+  `outTradeNo` varchar(32) DEFAULT NULL,
+  `tradeType` varchar(16) DEFAULT NULL,
+  `totalFee` int(11) DEFAULT NULL,
+  `productId` varchar(32) DEFAULT NULL,
+  `prepayId` varchar(64) DEFAULT NULL,
+  `codeUrl` varchar(64) DEFAULT NULL,
+  `transactionId` varchar(32) DEFAULT NULL,
+  `timeEnd` varchar(14) DEFAULT NULL,
+  `cashFee` int(11) DEFAULT NULL,
+  `bankType` varchar(16) DEFAULT NULL,
+  `payStatus` varchar(1) DEFAULT NULL,
+  `closed` varchar(1) DEFAULT NULL,
+  `timeExpire` datetime NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `outTradeNo` (`outTradeNo`) USING BTREE,
+  KEY `productId` (`productId`) USING BTREE,
+  KEY `prepayId` (`prepayId`) USING BTREE,
+  KEY `transactionId` (`transactionId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE `wx_refund_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `appId` varchar(32) DEFAULT NULL,
+  `status` varchar(64) DEFAULT NULL,
+  `mchId` varchar(32) DEFAULT NULL,
+  `outTradeNo` varchar(32) DEFAULT NULL,
+  `outRefundNo` varchar(32) DEFAULT NULL,
+  `refundId` varchar(28) DEFAULT NULL,
+  `totalFee` int(11) DEFAULT NULL,
+  `refundFee` int(11) DEFAULT NULL,
+  `cashFee` int(11) DEFAULT NULL,
+  `source` int(11) DEFAULT NULL,
+  `transactionId` varchar(28) DEFAULT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `outRefundNo` (`outRefundNo`) USING BTREE,
+  KEY `outTradeNo` (`outTradeNo`) USING BTREE,
+  KEY `refundId` (`refundId`) USING BTREE,
+  KEY `transactionId` (`transactionId`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

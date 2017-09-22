@@ -1,0 +1,20 @@
+{
+    "dataBase": {
+        "ctcDb": {
+            "database": "mall_wxpay",
+            "host": "192.168.0.117",
+            "username": "mall_wxpay_user",
+            "password": "L9ELWmY5Uq95JRopQmgW",
+            "dialect": "mysql",
+            "logging": false,
+            "timezone": "+08:00",
+            "pool": {
+                "maxConnections": 20
+            }
+        }
+    },
+    "port": 3100,
+    "outPort": 3110,
+    "SPBILL_CREATED_IP": "211.152.32.59",
+    "NOTIFY_URL": "http://mallweixinpay.dd528.com/weixin/pay/notify"
+}

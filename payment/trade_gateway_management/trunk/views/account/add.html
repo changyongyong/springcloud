@@ -1,0 +1,115 @@
+<%- include ../base/head.html %>
+<link rel="stylesheet" href="/plugins/bootstrap/bootstrap-datetimepicker.min.css">
+<style>
+    .search {
+        margin-left: 15px;
+    }
+
+    .search label:nth-child(n+2) {
+        margin-left: 15px;
+    }
+
+    .search [func=search] {
+        margin-left: 15px;
+        width: 150px;
+        display: inline-block
+    }
+    .search [func=export] {
+        margin-left: 15px;
+        width: 50px;
+        display: inline-block
+    }
+
+    input.queryTime.form-control {
+        cursor: pointer;
+        width: 150px;
+        height: 30px;
+        display: inline-block;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .form-group select {
+        margin-left:  10px
+    }
+    .goods-info span {
+        display: inline-block;
+        width: 150px;
+        margin-left: 10px;
+    }
+    .goods-info label {
+        margin-left: 15px;
+    }
+    .trade-success {
+        color: green;
+        font-weight: 600;
+        font-size: 17px
+    }
+    .trade-fail{
+        color: red;
+        font-weight: 600;
+        font-size: 17px
+    }
+    .trade-pendding{
+        color: darkorange;
+        font-size: 17px
+    }
+    .payment-refund-all{
+        color: red;
+        font-weight: 600;
+    }
+    .payment-refund-part{
+        color: darkorange;
+    }
+    .form-group .form-control {
+        margin-left: 50px;
+        display: inline;
+        width: 320px;
+    }
+</style>
+<%- include ../base/css.html %>
+<%- include ../plugins/datatables/css.html %>
+<%- include ../base/container.html %>
+<div>
+    <h3>基本信息</h3>
+    <div class="form-group">
+        <label style="margin-left: 1em;">账户名称</label>
+        <input type="tel" class="form-control"
+               placeholder="请输入账户名称" id="account_name">
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+    <div class="form-group">
+        <label style="margin-left: 1em;">支付渠道</label>
+        <select id="account_channel" class="form-control width-150"></select>
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+    <div class="form-group">
+        <label style="margin-left: 1em;">商户支持</label>
+        <select id="account_type" class="form-control width-150"></select>
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+    <div class="form-group">
+        <label style="margin-left: 2em;">appId</label>
+        <input type="tel" class="form-control"
+               placeholder="请输入appId" id="account_app_id">
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+    <div class="form-group">
+        <label style="margin-left: 3em;">邮箱</label>
+        <input type="tel" class="form-control"
+               placeholder="请输入邮箱" id="account_app_email">
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+    <div class="form-group">
+        <label style="margin-left: 1em;">商户秘钥</label>
+        <textarea id="account_secret_key" class="form-control" style="width: 570px" rows="20"></textarea>
+        <h5 style="color: #f00;display: inline;margin-left: 1em">*</h5>
+    </div>
+</div>
+
+<button id="submit_account" type="button" class="btn btn-success" style="width: 100px;">增加账户</button>
+
+<%- include ../base/javascript.html %>
+<%- include ../plugins/datatables/javascript.html %>
+<script type="text/javascript" charset="utf-8" src="/javascript/account/add.js"></script>
+<script type="text/javascript" charset="utf-8" src="/plugins/jquery/jquery.tips.js"></script>
+<%-include ../base/footer.html %>

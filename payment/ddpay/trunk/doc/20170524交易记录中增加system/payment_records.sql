@@ -1,0 +1,1 @@
+alter TABLE payment_records ADD COLUMN tradePrincipal VARCHAR (128) COMMENT '交易主体';

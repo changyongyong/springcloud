@@ -1,0 +1,42 @@
+{
+  "name": "trade_gateway",
+  "version": "0.1.0",
+  "description": "trade gateway",
+  "main": "server.js",
+  "scripts": {
+    "test": "eslint ./ && mocha ./test"
+  },
+  "author": "diandainfo.com",
+  "license": "PRIVATE",
+  "script": "server.js",
+  "out_file": "/home/logs/trade_gateway.log",
+  "error_file": "/home/logs/trade_gateway.log",
+  "merge_logs": true,
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "co": "^4.6.0",
+    "dianda-config": "^1.1.3",
+    "getconfig": "^3.0.0",
+    "hprose": "^2.0.37",
+    "joi": "^10.2.2",
+    "koa": "^2.0.0-alpha.7",
+    "koa-bodyparser": "^3.2.0",
+    "koa-router": "^7.0.1",
+    "koa-static": "^2.1.0",
+    "lodash": "^4.17.2",
+    "log4js": "^1.0.1",
+    "markdown-it": "^8.2.2",
+    "md5": "^2.2.1",
+    "moment": "^2.18.1",
+    "mq-simple": "^0.2.1",
+    "mysql": "^2.12.0",
+    "norepeat": "^1.0.2",
+    "redis": "^2.6.3",
+    "request": "^2.79.0",
+    "sequelize": "^3.29.0",
+    "validator": "^6.2.1"
+  },
+  "devDependencies": {
+    "should": "^11.1.1"
+  }
+}

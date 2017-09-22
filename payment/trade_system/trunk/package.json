@@ -1,0 +1,35 @@
+{
+  "name": "trade_system",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "script": "./server.js",
+  "out_file": "/home/logs/dianda_trade_system.log",
+  "error_file": "/home/logs/dianda_trade_system.log",
+  "merge_logs": true,
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.2",
+    "debug": "^2.6.8",
+    "express": "^4.15.3",
+    "getconfig": "^3.1.0",
+    "hprose": "^2.0.44",
+    "lodash": "^4.17.4",
+    "log4js": "^1.1.1",
+    "markdown-it": "^8.3.1",
+    "md5": "^2.2.1",
+    "moment": "^2.18.1",
+    "mysql2": "^1.3.5",
+    "redis": "^2.7.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "sequelize": "^4.3.0",
+    "serve-favicon": "^2.4.3"
+  },
+  "devDependencies": {
+    "mocha": "3.4.2",
+    "should": "11.2.1"
+  }
+}

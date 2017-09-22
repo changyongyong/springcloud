@@ -1,0 +1,35 @@
+#开发环境系统配置
+product:
+  system:
+    env: dev  #环境
+  dubbo:
+    registry: #dubbo的注册信息
+      address: localhost:2181
+      group: shengyibao_product_0731
+      port: 21880
+
+# TOMCAT (TomcatProperties)
+server:
+  port: 8082
+  session:
+    timeout: 259200000
+  context-path: /product
+
+#配置编码问题
+spring:
+  http:
+    encoding:
+      force: true
+      encoding:
+        charset: UTF-8
+        enabled: true
+
+#数据库配置
+mysql:
+  jdbc:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://116.228.89.150:53317/ctcdb_bc_test?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useOldAliasMetadataBehavior=true
+    username: dddev
+    password: 123456
+    validationQuery: select current_timestamp()
+    

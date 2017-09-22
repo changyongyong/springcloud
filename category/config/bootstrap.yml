@@ -1,0 +1,20 @@
+
+server:
+  port: 7078
+  
+  
+spring:
+  application:
+    name: service-category
+
+  cloud:  
+    config:  
+      uri: http://192.168.1.200:7090
+      name: shengyibao
+      profile: dev
+      label: syb  # 当使用git存储时，默认就是master
+
+#数据库配置
+mysql: 
+  jdbc: 
+    databasename: syb_category_dev?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useOldAliasMetadataBehavior=true

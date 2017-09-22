@@ -1,0 +1,41 @@
+#生产环境系统配置
+syb:  
+  system:
+    env: pro
+
+# eureka配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:  http://192.168.1.200:7070/eureka/
+
+management: 
+  security:
+    enabled:  false
+
+#spring相关配置
+spring:
+  # 配置编码问题
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+
+#数据库配置
+mysql:  
+  jdbc: 
+    driverClassName: com.mysql.jdbc.Driver
+    url:  116.228.89.150:53317
+    username: dddev
+    password: 123456
+    validationQuery: select current_timestamp()
+    
+#是否开启swagger2做api文档暴露
+swagger2:
+   enable: false   
+
+   
+#开启断路器
+feign: 
+  hystrix: 
+    enabled: true       

@@ -1,0 +1,19 @@
+{
+  "port": 52200,
+    "redis": {
+        "host": "192.168.1.101",
+        "port": 6379,
+        "db": 12
+    },
+  "dataBase": {
+    "ddPayDb": {
+      "database": "dd_pay_dev_db",
+      "host": "192.168.1.101",
+      "username": "root",
+      "password": "123456",
+      "dialect": "mysql",
+      "isolationLevel": "READ COMMITTED",
+      "logging": true
+    }
+  }
+}

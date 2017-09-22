@@ -1,0 +1,26 @@
+{
+    "port": 52200,
+    "redis": {
+        "host": "192.168.0.251",
+        "port": 6379,
+        "db": 12
+    },
+    "tradeGatewayHost": "http://mallgateway.diandainfo.com",
+    "dataBase": {
+        "ddPayDb": {
+            "database": "mall_ddpay_db",
+            "username": "mall_ddpay_user",
+            "password": "4pXCbbQRZGaBdljbuWk0",
+            "options": {
+                "host": "192.168.0.117",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00",
+                "pool": {
+                    "maxConnections": 50
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "redis": {
+        "host": "192.168.0.103",
+        "port": 6379,
+        "db": 12,
+        "secret": "trade_gateway_management",
+        "key": "tradeGateway.sid"
+    },
+    "port": 52310,
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "trade_gateway_db",
+            "username": "outertrade",
+            "password": "outertrade123",
+            "options": {
+                "host": "192.168.0.103",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00"
+            }
+        }
+    },
+    "tradeGateWayUrl": "http://127.0.0.1:52300",
+    "aliPayServer": "http://127.0.0.1:3200"
+}

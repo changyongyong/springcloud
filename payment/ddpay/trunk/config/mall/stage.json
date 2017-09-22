@@ -1,0 +1,22 @@
+{
+  "port": 52200,
+  "redis": {
+    "host": "192.168.0.103",
+    "port": 6379,
+    "db": 12
+  },
+  "dataBase": {
+    "ddPayDb": {
+      "database": "dd_pay_db",
+      "username": "outerpay",
+      "password": "outerpay123",
+      "options": {
+        "host": "192.168.0.103",
+        "dialect": "mysql",
+        "isolationLevel": "READ COMMITTED",
+        "logging": true,
+        "timezone": "+08:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+    "development": {
+        "dataBase": {
+            "ctcDb": {
+                "database": "ctcdb_alipay_test",
+                "host": "192.168.1.101",
+                "username": "apiuser",
+                "password": "123456",
+                "dialect": "mysql",
+                "timezone": "+08:00"
+            }
+        },
+        "port": 3201,
+        "outPort": 3210,
+        "NOTIFY_URL": "http://116.228.89.150:3210/alipay/notify",
+        "secret": "ali_pay",
+        "aliAuthUrl": "http://116.228.89.150:3210/alipay/thirdAuth",
+        "aliPayUrl": "https://openauth.alipay.com/oauth2/appToAppAuth.htm"
+    },
+    "experience": {
+        "dataBase": {
+            "ctcDb": {
+                "database": "ctcdb_alipay",
+                "host": "192.168.0.103",
+                "username": "aliuser",
+                "password": "ali898816",
+                "dialect": "mysql",
+                "timezone": "+08:00"
+            }
+        },
+        "port": 3200,
+        "outPort": 3210,
+        "NOTIFY_URL": "http://alipaytest.dd528.com/alipay/notify",
+        "aliAuthUrl": "http://alipaytest.dd528.com/alipay/thirdAuth",
+        "aliPayUrl": "https://openauth.alipay.com/oauth2/appToAppAuth.htm"
+    },
+    "test": {
+        "dataBase": {
+            "ctcDb": {
+                "database": "ctcdb_alipay_test",
+                "host": "192.168.1.101",
+                "username": "apiuser",
+                "password": "123456",
+                "dialect": "mysql",
+                "timezone": "+08:00"
+            }
+        },
+        "port": 3200,
+        "outPort": 3210,
+        "NOTIFY_URL": "http://116.228.89.150:3210/alipay/notify",
+        "secret": "ali_pay",
+        "aliAuthUrl": "http://116.228.89.150:3210/alipay/thirdAuth",
+        "aliPayUrl": "https://openauth.alipay.com/oauth2/appToAppAuth.htm"
+    },
+    "production": {
+        "dataBase": {
+            "ctcDb": {
+                "database": "mall_alipay",
+                "host": "192.168.0.117",
+                "username": "mall_alipay_user",
+                "password": "ahxFSD9jHM9y0imB42hB",
+                "dialect": "mysql",
+                "logging": false,
+                "timezone": "+08:00",
+                "pool": {
+                    "maxConnections": 20
+                }
+            }
+        },
+        "port": 3200,
+        "outPort": 3210,
+        "NOTIFY_URL": "https://mallalipay.dd528.com/alipay/notify",
+        "aliAuthUrl": "http://mallalipay.dd528.com/alipay/thirdAuth",
+        "aliPayUrl": "https://openauth.alipay.com/oauth2/appToAppAuth.htm"
+    }
+}

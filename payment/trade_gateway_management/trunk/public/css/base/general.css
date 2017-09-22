@@ -1,0 +1,369 @@
+/*独有标记css*/
+body {
+    font-family: microsoft yahei, sans-serif;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+/*TODO datatables插件的css覆盖*/
+table.dataTable thead th {
+    padding: 5px 9px !important;
+}
+
+.dataTable-tl {
+    text-align: left;
+}
+
+select[name$="_length"] {
+    /*每页显示 xx 条数据的长度*/
+    width: 70px;
+    padding: 3px 6px;
+}
+
+/*标准p中表格化显示单据信息*/
+p.statisOrder label {
+    margin-right: 20px;
+}
+
+p.statisOrder span {
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+/*TODO 信息维护模态框样式*/
+table.update-info-modal {
+
+}
+
+/*TODO 表单效果通用类*/
+
+table button[func*='function'] {
+    background: #31b0d5;
+    border: 1px solid #bbb;
+    border-radius: 25px;
+    -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+    box-shadow: inset 0 0 1px 1px #f6f6f6;
+    color: #ffffff;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+
+}
+
+table a[type='button'] {
+    background-color: #31b0d5;
+    border: 1px solid #bbb;
+    border-radius: 25px;
+    -webkit-box-shadow: inset 0 0 1px 1px #f6f6f6;
+    box-shadow: inset 0 0 1px 1px #f6f6f6;
+    color: #ffffff;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+}
+
+div#stockInOrderAddGeneralInfo .form-group {
+    margin-left: 20px;
+    display: inline;
+}
+
+div#stockInOrderAddGeneralInfo .form-control {
+    margin-left: 2px;
+    display: inline;
+    width: 120px;
+}
+
+table#addStockInViewsTable td, table#addStockInViewsTable th, table#addStockInViewsTable tr {
+    text-align: center;
+    font-family: simsun, serif;
+    font-size: 12px;
+}
+
+form#addGoodToGoodsViewModelForm .form-control {
+    margin-left: 50px;
+    display: inline;
+    width: 320px;
+}
+
+/*TODO 公用标记css*/
+
+.inline {
+    display: inline;
+}
+
+.relative-left-inline {
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+.clear {
+    margin-top: 20px;
+}
+
+.red {
+    color: #FF0000;
+}
+
+.width-20 {
+    width: 40px;
+}
+
+.width-40 {
+    width: 40px;
+}
+
+.width-50 {
+    width: 50px;
+}
+
+.width-60 {
+    width: 50px;
+}
+
+.width-70 {
+    width: 70px;
+}
+
+.width-80 {
+    width: 800px;
+}
+
+.width-100 {
+    display: inline;
+    width: 100px;
+}
+
+.width-120 {
+    width: 120px;
+}
+
+.width-140 {
+    width: 140px;
+}
+
+.width-150 {
+    display: inline;
+    width: 150px;
+}
+
+.width-160 {
+    width: 160px;
+}
+
+.width-180 {
+    display: inline;
+    width: 180px;
+}
+
+.width-200 {
+    display: inline;
+    width: 200px;
+}
+
+.width-250 {
+    display: inline;
+    width: 250px;
+}
+
+.width-300 {
+    display: inline;
+    width: 300px;
+}
+
+.width-350 {
+    display: inline;
+    width: 350px;
+}
+
+.width-400 {
+    display: inline;
+    width: 400px;
+}
+
+.width-450 {
+    display: inline;
+    width: 450px;
+}
+
+/*等分20分后提取宽度*/
+.width-avg-1 {
+    width: 5%;
+}
+
+.width-avg-2 {
+    width: 10%;
+}
+
+.width-avg-3 {
+    width: 15%;
+}
+
+.width-avg-4 {
+    width: 20%;
+}
+
+.width-avg-5 {
+    width: 25%;
+}
+
+.width-avg-6 {
+    width: 30%;
+}
+
+.width-avg-7 {
+    width: 35%;
+}
+
+.width-avg-8 {
+    width: 40%;
+}
+
+.width-avg-9 {
+    width: 45%;
+}
+
+.width-avg-10 {
+    width: 50%;
+}
+
+.width-avg-11 {
+    width: 55%;
+}
+
+.width-avg-12 {
+    width: 60%;
+}
+
+.width-avg-13 {
+    width: 65%;
+}
+
+.width-avg-14 {
+    width: 70%;
+}
+
+.width-avg-15 {
+    width: 75%;
+}
+
+.width-avg-16 {
+    width: 80%;
+}
+
+.width-avg-17 {
+    width: 85%;
+}
+
+.width-avg-18 {
+    width: 90%;
+}
+
+.width-avg-19 {
+    width: 95%;
+}
+
+.width-avg-20 {
+    width: 100%;
+}
+
+.ml-05em {
+    margin-left: 0.5em;
+}
+
+.ml-1em {
+    margin-left: 1em;
+}
+
+.ml-2em {
+    margin-left: 2em;
+}
+
+.ml-3em {
+    margin-left: 3em;
+}
+
+.ml-4em {
+    margin-left: 4em;
+}
+
+.ml-5em {
+    margin-left: 5em;
+}
+
+.ml-6em {
+    margin-left: 6em;
+}
+
+.ml-8 {
+    margin-left: 8px;
+}
+
+.ml-11 {
+    margin-left: 11px;
+}
+
+.ml-16 {
+    margin-left: 16px;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.ml-25 {
+    margin-left: 25px;
+}
+
+.ml-34 {
+    margin-left: 34px;
+}
+
+.ml-40 {
+    margin-left: 40px;
+}
+
+a.order-view-details-a {
+    position: relative;
+}
+
+a.order-view-details-a span {
+    display: none;
+}
+
+a.order-view-details-a:hover span {
+    line-height: 20px;
+    text-align: left;
+    z-index: 999;
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: -15em;
+    margin-top: 5px;
+    font-family: 'microsoft yahei', sans-serif;
+    font-weight: normal;
+    background-color: white;
+    text-decoration: none;
+    height: auto;
+    padding: 10px;
+    width: 400px;
+    border: 2px solid #dedede;
+    font-size: 12px;
+    -moz-border-radius: 15px; /* Gecko browsers */
+    -webkit-border-radius: 15px; /* Webkit browsers */
+    border-radius: 15px; /* W3C syntax */
+}
+
+a.order-view-details-a:hover {
+    /*这段就是奇怪的代码咯：设置鼠标放在链接上显示文字大小为100%*/
+    font-size: 100%;
+}

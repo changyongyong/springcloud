@@ -1,0 +1,2 @@
+ALTER TABLE mq_send_messages ADD COLUMN state INT DEFAULT 0 COMMENT '消息发送状态',
+ ADD COLUMN messageId VARCHAR (200) COMMENT '消息ID';

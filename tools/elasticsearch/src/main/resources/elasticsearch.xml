@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd  
+           http://www.springframework.org/schema/context  
+           http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<bean id="eSClientHelper" class="com.dianda.elasticsearch.ESClientHelper">
+		<constructor-arg name="clusterName" value="${elasticsearch.clusterName}" />
+		<constructor-arg name="eshost" value="${elasticsearch.eshost}" />
+		<constructor-arg name="essocket" value="${elasticsearch.essocket}" />
+		<constructor-arg name="shards" value="${elasticsearch.shards}" />
+		<constructor-arg name="replicas" value="${elasticsearch.replicas}" />
+	</bean>
+
+	<bean id="eSAdapter" class="com.dianda.elasticsearch.ESAdapter">
+		<constructor-arg name="eSClientHelper" ref="eSClientHelper" />
+	</bean>
+
+</beans>

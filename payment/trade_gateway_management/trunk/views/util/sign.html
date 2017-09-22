@@ -1,0 +1,30 @@
+<%- include ../base/head.html %>
+<link rel="stylesheet" href="/plugins/bootstrap/bootstrap-datetimepicker.min.css">
+<%- include ../base/css.html %>
+<%- include ../plugins/datatables/css.html %>
+<%- include ../base/container.html %>
+<style>
+    .form-group div {
+        margin-top: 5px
+    }
+    </style>
+<div>
+    <div class="form-group">
+        <div>参数：<textarea name="par" type="textarea" class="form-control" 
+            style="margin-left:2em;width:400px;height:300px;display:inline-block" rows="12"
+            placeholder='请填写JSON格式字符串，比如:{"a":"1","b":"2"}'></textarea></div>
+        <div>密钥：<input type="text" class="form-control width-400" style="margin-left:2em" name="token"></div>
+    </div>
+    会默认补充参数onceStr和timestamp
+    <hr>
+    <div class="form-group">
+        <div>待签名：<span name="signStr" style="margin-left:1em"></div>
+        <div>签名后：<span name="result" style="margin-left:1em"></div>
+        <div>签名：<span name="sign" style="margin-left:2em"></div>
+    </div>
+    <div><span class="btn btn-success" dd-action="sign">签名</span></div>
+</div>
+<%- include ../base/javascript.html %>
+<%- include ../plugins/datatables/javascript.html %>
+<script src="/javascript/util/sign.js"> </script>
+<%-include ../base/footer.html %>

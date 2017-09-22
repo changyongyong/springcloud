@@ -1,0 +1,12 @@
+{
+  "dataBase": {
+    "aliPayDb": {
+      "database": "ctcdb_alipay",
+      "host": "192.168.0.103",
+      "username": "aliuser",
+      "password": "ali898816",
+      "dialect": "mysql",
+      "timezone": "+08:00"
+    }
+  }
+}

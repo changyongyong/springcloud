@@ -1,0 +1,17 @@
+{
+  "development": {
+    "sequence": "http://192.168.1.240:52150"
+  },
+  "test": {
+    "sequence": "http://192.168.1.240:52150"
+  },
+  "experience":{
+    "sequence": "http://192.168.0.101:52150"
+  },
+  "stage":{
+    "sequence": "http://0.0.0.0:52150"
+  },
+  "production": {
+    "sequence": "http://sequencerpc.diandainfo.com"
+  }
+}

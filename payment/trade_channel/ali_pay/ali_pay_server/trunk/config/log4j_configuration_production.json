@@ -1,0 +1,36 @@
+{
+  "replaceConsole": true,
+  "appenders": [
+    {
+      "type": "console"
+    },
+    {
+      "type": "dateFile",
+      "filename": "./log/access/access.log",
+      "pattern": "-yyyy-MM-dd.log",
+      "category": "access"
+    },
+    {
+      "type": "dateFile",
+      "filename": "./log/app/app.log",
+      "pattern": "-yyyy-MM-dd.log"
+    },
+    {
+      "type": "file",
+      "filename": "./log/app.log"
+    },
+    {
+      "type": "logLevelFilter",
+      "level": "ERROR",
+      "appender": {
+        "type": "file",
+        "filename": "./log/errors.log"
+      }
+    },
+    {
+      "type": "file",
+      "filename": "./log/cluster.log",
+      "category": "cluster"
+    }
+  ]
+}

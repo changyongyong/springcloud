@@ -1,0 +1,1 @@
+ALTER TABLE `ali_transaction_log` MODIFY COLUMN `payStatus` varchar(2), MODIFY COLUMN `closed` varchar(2) ; 

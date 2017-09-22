@@ -1,0 +1,30 @@
+{
+    "port": 52400,
+    "rpc": {
+        "port": 52450,
+        "host": "http://0.0.0.0"
+    },
+    "tradeGatewayConfig": {
+        "host": "http://mallgateway.diandainfo.com"
+    },
+    "ddpayConfig": {
+        "host": "http://mallddpay.diandainfo.com"
+    },
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "mall_trade_gateway",
+            "username": "mall_trade_user",
+            "password": "iw72Mp7VyWipkOAir1vl",
+            "options": {
+                "host": "192.168.0.117",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00",
+                "pool": {
+                    "maxConnections": 20
+                }
+            }
+        }
+    }
+}

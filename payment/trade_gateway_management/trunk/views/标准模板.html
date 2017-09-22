@@ -1,0 +1,29 @@
+<%- include ./base/head.html %>
+<!--常用css-->
+<%- include ./base/css.html %>
+<!--dt用css-->
+<%- include plugins/datatables.html %>
+<%- include ./base/container.html %>
+<div class="panel panel-primary " onselectstart="return false">
+    <div class="panel-heading" style="position: relative;">
+        <p class="font_size_20 panel-title"><span class="ml-6em" id=""></span></p>
+    </div>
+    <div class="panel-body">
+        <table id="" class="table table-hover table-condensed table-striped">
+            <thead style="font-size: 13px;">
+            <tr>
+                <th></th>
+                <th func=""></th>
+            </tr>
+            </thead>
+            <tbody style="font-size: 14px;"></tbody>
+        </table>
+    </div>
+</div>
+</div>
+<!--常用js-->
+<%- include ./base/javascript.html %>
+<!--dt用js-->
+<%- include plugins/datatables.html %>
+<!--使用dt的标准js-->
+<%- include ./base/footer.html %>

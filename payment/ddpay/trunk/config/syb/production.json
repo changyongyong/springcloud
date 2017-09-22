@@ -1,0 +1,26 @@
+{
+    "port": 52200,
+    "redis": {
+        "host": "192.168.0.251",
+        "port": 6379,
+        "db": 12
+    },
+    "tradeGatewayHost": "http://sybgateway.diandainfo.com",
+    "dataBase": {
+        "ddPayDb": {
+            "database": "ddpay_db",
+            "username": "ddpayuser",
+            "password": "YsF1lLi90oa2v*",
+            "options": {
+                "host": "192.168.0.117",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00",
+                "pool": {
+                    "maxConnections": 50
+                }
+            }
+        }
+    }
+}

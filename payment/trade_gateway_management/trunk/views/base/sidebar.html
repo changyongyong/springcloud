@@ -1,0 +1,52 @@
+<style>
+    .click-active {
+        background: #EAE9E9;
+    }
+</style>
+<nav class="navbar navbar-default navbar-static-top" role="navigation"
+     style="margin-bottom: 0;background-color:#264D69;">
+    <ul class="nav navbar-top-links navbar-right">
+        <li style="color: #ffffff;">
+            <label style="margin:0 1em;font-size: 16px;" id="branch-name"></label>
+        </li>
+        <li>
+            <a href="/user/check_out">
+                <i class="fa fa-sign-out fa-fw"></i><strong>注销用户</strong>
+            </a>
+        </li>
+    </ul>
+    <div class="navbar-header"><img src="/images/logo.png" style="height:35px; margin-left:10px; margin-top:5px;"/>
+        <label style="font-size: 24px;color: white; font-family:microsoft yahei light;position:relative;top:12px;left:5px;">
+            <%= global.APP_NAME %>
+            <span
+                    style="font-size: 16px;margin-left: 10px;">V_<%= global.VERSION %></span></label>
+    </div>
+    <div class="navbar-default sidebar" role="navigation">
+        <div class="sidebar-nav navbar-collapse">
+            <ul class="nav" id="side-menu">
+                <li class="first-menu" id="receipt-menu"><a href="/payment/record" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>付款记录<span class="fa arrow"></span></a>
+                </li>
+                <li class="first-menu" id="receipt-menu"><a href="/refund/record" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>退款记录<span class="fa arrow"></span></a>
+                </li>
+                <li class="first-menu" id="receipt-menu"><a href="/transfer/record" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>转账记录<span class="fa arrow"></span></a>
+                </li>
+                <li class="first-menu" id="receipt-menu"><a href="/missing/record" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>丢失记录<span class="fa arrow"></span></a>
+                </li>
+                <li class="first-menu" id="receipt-menu"><a href="/bind/list" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>账户列表<span class="fa arrow"></span></a>
+                </li>
+                <li class="first-menu" id="receipt-menu"><a href="/util/sign" class=""><i
+                        class="glyphicon glyphicon-list-alt"></i>签名助手<span class="fa arrow"></span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+

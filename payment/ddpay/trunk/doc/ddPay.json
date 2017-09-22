@@ -1,0 +1,22 @@
+{
+  "port": 50000,
+  "rpc": {
+    "port": 50050,
+    "host": "http://0.0.0.0"
+  },
+  "redis": {
+    "port": 6379,
+    "db": "1",
+    "host": "192.168.1.101"
+  },
+  "dataBase": {
+    "ddPayDb": {
+      "isolationLevel": "READ COMMITTED",
+      "username": "root",
+      "host": "192.168.1.101",
+      "dialect": "mysql",
+      "password": "123456",
+      "database": "dd_pay_db"
+    }
+  }
+}

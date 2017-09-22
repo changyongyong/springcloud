@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<appenders>
+
+		<RollingFile
+			name="RollingFile"
+			fileName="http/log/railyFile.log"
+			filePattern="http/logs/$${date:yyyy-MM}/app-%d{MM-dd-yyyy}-%i.log.gz">
+			<PatternLayout pattern="%l       %p:%d{yyyy-MM-dd HH:mm:ss}-%m%n" />
+			<SizeBasedTriggeringPolicy size="5MB" />
+		</RollingFile>
+		
+	</appenders>
+
+	<loggers>
+		<!-- 该启动类需要把启动日志打印，便于监控启动服务是否完成 -->
+		<logger name="com.dianda.Application" level="info" additivity="false">
+            <appender-ref ref="RollingFile"/>
+        </logger>
+        
+		<!--建立一个默认的root的logger 输出info级别的日志，根据实际情况可以添加或者更换error级别的日志输出 -->
+		<root level="info">
+			<appender-ref ref="RollingFile"/>
+		</root>
+	</loggers>
+</configuration>

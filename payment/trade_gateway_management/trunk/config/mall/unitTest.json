@@ -1,0 +1,25 @@
+{
+    "redis": {
+        "host": "192.168.1.101",
+        "port": 6379,
+        "db": 1,
+        "secret": "trade_gateway_management",
+        "key": "tradeGateway.sid"
+    },
+    "port": 52310,
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "trade_gateway_test_db",
+            "host": "192.168.1.101",
+            "username": "dddev",
+            "password": "123456",
+            "options": {
+                "host": "192.168.1.101",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00"
+            }
+        }
+    }
+}

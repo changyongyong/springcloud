@@ -1,0 +1,26 @@
+{
+    "redis": {
+        "host": "192.168.0.251",
+        "port": 6379,
+        "db": 12,
+        "secret": "trade_gateway_management",
+        "key": "tradeGateway.sid"
+    },
+    "port": 52310,
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "trade_gateway",
+            "username": "gwuser",
+            "password": "YsZ&hQ1oOzka2v*",
+            "options": {
+                "host": "192.168.0.117",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00"
+            }
+        }
+    },
+    "tradeGateWayUrl": "http://sybgateway.diandainfo.com",
+    "aliPayServer": "http://sybinneralipay.diandainfo.com"
+}

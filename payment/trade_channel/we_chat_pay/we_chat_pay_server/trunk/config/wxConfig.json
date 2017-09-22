@@ -1,0 +1,32 @@
+{
+    "dd528": {
+        "appId": "wx0760d57c26778206",
+        "mchId": "1439347102",
+        "partnerKey": "20170210142831022619838803068150",
+        "cert": "apiclient_cert_dd528.p12"
+    },
+    "psapp": {
+        "appId": "wx65cda5aab3553b8b",
+        "mchId": "1476049402",
+        "partnerKey": "20170210142831022619838803068150",
+        "cert": "apiclient_cert_psapp.p12"
+    },
+    "bsapp": {
+        "appId": "wx0cd4150abf2b1516",
+        "mchId": "1470989702",
+        "partnerKey": "20170210142831022619838803068150",
+        "cert": "apiclient_cert_bsapp.p12"
+    },
+    "wxmp": {
+        "appId": "wxaee15d3944113c49",
+        "mchId": "1448207702",
+        "partnerKey": "20170210142831022619838803068150",
+        "cert": "apiclient_cert_wxmp.p12"
+    },
+    "ddfws": {
+        "appId": "wxff2aff0bdf52729a",
+        "mchId": "1482086972",
+        "partnerKey": "20170210142831022619838803068150",
+        "cert": "apiclient_cert_ddfws.p12"
+    }
+}

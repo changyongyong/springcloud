@@ -1,0 +1,13 @@
+<% if(error && error.toString().length > 0){ %>
+<script>
+    $(function () {
+        $.sobox.alert("失败", "<span style='color:#ff0000;'><%=error%></span>");
+    })
+</script>
+<% }if(success && success.toString().length > 0){ %>
+<script>
+    $(function () {
+        $.sobox.alert("成功", "<span style='color:#ff0000;'><%=success%></span>");
+    })
+</script>
+<% } %>

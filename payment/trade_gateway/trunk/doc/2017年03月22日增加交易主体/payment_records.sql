@@ -1,0 +1,1 @@
+ALTER TABLE payment_records ADD COLUMN tradePrincipal VARCHAR (100) COMMENT '交易主体城市';

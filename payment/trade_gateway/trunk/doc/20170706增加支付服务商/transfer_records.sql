@@ -1,0 +1,1 @@
+ALTER TABLE transfer_records ADD COLUMN tpr_tm_id INT COMMENT "商户配置表ID";

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration status="info">
+	<appenders>
+		<Console
+			name="Console"
+			target="SYSTEM_OUT">
+			<ThresholdFilter
+				level="info"
+				onMatch="ACCEPT"
+				onMismatch="DENY" />
+			<PatternLayout pattern="%l       %p:%d{yyyy-MM-dd HH:mm:ss}-%m%n" />
+		</Console>
+
+	</appenders>
+
+	<loggers>
+	<!-- 该启动类需要把启动日志打印，便于监控启动服务是否完成 -->
+		<logger name="com.syb.miniapps.MiniappsApplication" level="info" additivity="false">
+            <appender-ref ref="Console"/>
+        </logger>
+		<!--建立一个默认的root的logger 输出info级别的日志，根据实际情况可以添加或者更换error级别的日志输出 -->
+		<root level="info">
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+</configuration>

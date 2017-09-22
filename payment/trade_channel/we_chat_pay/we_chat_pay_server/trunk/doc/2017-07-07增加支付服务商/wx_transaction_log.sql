@@ -1,0 +1,1 @@
+ALTER TABLE wx_transaction_log ADD COLUMN sub_mch_id INT COMMENT '子商户号';

@@ -1,0 +1,27 @@
+{
+    "port": 52400,
+    "rpc": {
+        "port": 52450,
+        "host": "http://0.0.0.0"
+    },
+    "tradeGatewayConfig": {
+        "host": "http://localhost:52300"
+    },
+    "ddpayConfig": {
+        "host": "http://localhost:52200"
+    },
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "trade_gateway_test_db",
+            "username": "apiuser",
+            "password": "123456",
+            "options": {
+                "host": "192.168.1.101",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00"
+            }
+        }
+    }
+}

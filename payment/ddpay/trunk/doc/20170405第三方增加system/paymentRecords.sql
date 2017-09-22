@@ -1,0 +1,1 @@
+alter table payment_records add column system varchar(50) comment '发起支付系统';

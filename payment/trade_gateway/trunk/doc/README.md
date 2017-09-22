@@ -1,0 +1,38 @@
+本系统提供支付相关的接口，将各个系统的请求处理并转发至实际银行或第三方用以实现付款，退款，转账，查账等功能
+## 文件结构如下
+- /bin
+- /config 配置文件
+    - /mq MQ相关配置，注意内外两个mq服务
+    - /tradeChannle 支付通道配置，注意文件名与环境（NODE_ENV）
+    - log4jConfig.js log4Js配置
+    - rpcUrl.js RPC配置
+    - 其它：数据库，端口，redis
+- /doc 文档
+- /lib 基础库
+    - /mq MQ库，包含建立连接，基础的写入日志服务
+    - /rpc RPC库，包括开启读取配置，连接其它系统RPC服务
+- /log 日志
+- /middleWare KOA框架所需中间件，会在请求时加载在KOA上
+- /models 数据库Model
+- /mq 业务相关MQ服务，接受到消息后的操作等
+- /node_modules node模块
+- /public http静态资源
+- /router http访问所需路由，实际地址与文件路径相同
+    - /api 使用API访问数据
+    - /view 页面访问
+- /rpc 对外暴露的RPC接口
+- /service 具体的业务逻辑
+    - index.js 封装方法，提供基座功能，用以service之外调用
+- /test unit test
+- /tradeChannel 调用支付渠道的请求方法
+    - util.js request工具等
+    - 渠道名.js 对应渠道的调用
+- /utils
+- .eslintignore eslint配置忽略的文件或者文件夹
+- .eslintrc.json eslint检查规则配置
+- .gitignore git忽略文件
+- jsbeatifyrc jsbeatify格式化配置文件，用以统一编码格式
+- app.js 程序主入口
+- nodemon.json nodemon（文件变更自动重启）工具配置
+- package.json
+

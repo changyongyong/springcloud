@@ -1,0 +1,6 @@
+.svn
+.idea
+node_modules
+log/*.log
+log/*/*.log
+.vscode

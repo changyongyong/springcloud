@@ -1,0 +1,30 @@
+{
+    "port": 52400,
+    "rpc": {
+        "port": 52450,
+        "host": "http://0.0.0.0"
+    },
+    "tradeGatewayConfig": {
+        "host": "http://sybgateway.diandainfo.com"
+    },
+    "ddpayConfig": {
+        "host": "http://sybddpay.diandainfo.com"
+    },
+    "dataBase": {
+        "tradeGatewayDb": {
+            "database": "trade_gateway",
+            "username": "gwuser",
+            "password": "YsZ&hQ1oOzka2v*",
+            "options": {
+                "host": "192.168.0.117",
+                "dialect": "mysql",
+                "isolationLevel": "READ COMMITTED",
+                "logging": true,
+                "timezone": "+08:00",
+                "pool": {
+                    "maxConnections": 20
+                }
+            }
+        }
+    }
+}

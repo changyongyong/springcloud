@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>2.7</log4j.version>
+
+		<!-- 依赖第三方jar版本 -->
+		<jjwt.version>0.6.0</jjwt.version>
+		<mysql.driver.version>5.1.32</mysql.driver.version>
+		<fastjson.version>1.2.7</fastjson.version>
+		<jackson.version>2.5.3</jackson.version>
+		<jodatime.version>2.9.9</jodatime.version>
+		<gson.version>2.8.1</gson.version>
+		<commons-long.version>3.3.2</commons-long.version>
+		<commons-fileupload.version>1.3.1</commons-fileupload.version>
+		<commons-io.version>1.3.2</commons-io.version>
+	</properties>
+
+	<groupId>com.shengyibao</groupId>
+	<artifactId>tools</artifactId>
+	<version>1.0.0-release</version>
+
+	<packaging>pom</packaging>
+	<name>shengyibao-tools</name>
+	<description>dian da shengyibao</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<!-- 可被继承的依赖 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-slf4j-impl</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<distributionManagement>
+		<repository>
+			<id>dianda-releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://116.228.89.150:7081/nexus/content/repositories/shengyibao-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>dianda-snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://116.228.89.150:7081/nexus/content/repositories/shengyibao-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<!-- 发布到私服的配置 -->
+	<profiles>
+		<profile>
+			<id>dpro</id>
+			<properties>
+				<project.release.version>${project.version}</project.release.version>
+			</properties>
+		</profile>
+		<profile>
+			<id>dsnap</id>
+			<properties>
+				<project.release.version>${project.version}</project.release.version>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>jar-no-fork</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

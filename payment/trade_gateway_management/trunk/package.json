@@ -1,0 +1,45 @@
+{
+  "name": "trade_gateway_management",
+  "appName": "支付管理",
+  "version": "0.1.0",
+  "description": "支付管理",
+  "main": "server.js",
+  "scripts": {
+    "test": "eslint ./ && mocha ./test"
+  },
+  "author": "diandainfo.com",
+  "license": "PRIVATE",
+  "script": "server.js",
+  "out_file": "/home/logs/trade_gateway_management.log",
+  "error_file": "/home/logs/trade_gateway_management.log",
+  "merge_logs": true,
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.17.1",
+    "connect-redis": "^3.2.0",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "excel-export": "^0.5.1",
+    "express": "^4.15.1",
+    "express-session": "^1.15.1",
+    "getconfig": "^3.0.0",
+    "hprose": "^2.0.42",
+    "joi": "^10.2.2",
+    "lodash": "^4.17.2",
+    "log4js": "^1.0.1",
+    "markdown-it": "^8.2.2",
+    "moment": "^2.17.0",
+    "mq-simple": "^0.2.1",
+    "mysql": "^2.12.0",
+    "norepeat": "^1.0.2",
+    "redis": "^2.6.3",
+    "request": "^2.79.0",
+    "sequelize": "^3.29.0",
+    "serve-favicon": "^2.4.1",
+    "uuid": "^3.1.0",
+    "validator": "^6.2.1"
+  },
+  "devDependencies": {
+    "should": "^11.1.1"
+  }
+}

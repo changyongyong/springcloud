@@ -1,0 +1,18 @@
+{
+  "port": 52300,
+  "dataBase": {
+    "tradeGatewayDb": {
+      "database": "trade_gateway_test_db",
+      "host": "192.168.1.101",
+      "username": "root",
+      "password": "123456",
+      "options": {
+        "host": "192.168.1.101",
+        "dialect": "mysql",
+        "isolationLevel": "READ COMMITTED",
+        "logging": true,
+        "timezone": "+08:00"
+      }
+    }
+  }
+}

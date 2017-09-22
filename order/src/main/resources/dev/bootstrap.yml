@@ -1,0 +1,27 @@
+#开发环境系统配置
+
+# TOMCAT (TomcatProperties)
+server:
+  port: 8081
+  context-path: /
+
+#spring相关配置
+spring:
+  application:
+    name: order-service
+   # 配置中心
+  cloud:  
+    config:  
+      uri: http://192.168.1.200:7090
+      name:  shengyibao
+      profile: dev
+      label: syb  # 当使用git存储时，默认就是master
+  # 环境
+  profiles:
+    active: dev
+    
+#数据库配置
+mysql:
+  jdbc:
+    databasename: syb_order_dev?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useOldAliasMetadataBehavior=true
+

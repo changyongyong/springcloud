@@ -1,0 +1,16 @@
+{
+    "dataBase": {
+        "aliPayDb": {
+            "database": "mall_alipay",
+            "host": "192.168.0.117",
+            "username": "mall_alipay_user",
+            "password": "ahxFSD9jHM9y0imB42hB",
+            "dialect": "mysql",
+            "logging": false,
+            "timezone": "+08:00",
+            "pool": {
+                "maxConnections": 20
+            }
+        }
+    }
+}
